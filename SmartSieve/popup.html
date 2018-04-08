@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+		p, h1, button { font-family: 'HelveticaNeue', sans-serif; }
+			#bg {
+			  position: fixed; 
+			  top: -50%; 
+			  left: -50%; 
+			  width: 200%; 
+			  height: 200%;
+			}
+			@font-face {
+	  		  font-family:"HelveticaNeue";
+	    	  src: url("HelveticaNeue.ttf") 
+			}
+			#bg img {
+			  position: absolute; 
+			  top: 0; 
+			  left: 0; 
+			  right: 0; 
+			  bottom: 0; 
+			  margin: auto; 
+			  min-width: 50%;
+			  min-height: 50%;
+			}
+			input {
+				visibility: hidden;
+			}
+			.switch {
+			  position: relative;
+			  display: inline-block;
+			  width: 60px;
+			  height: 34px;
+			}
+
+
+			.switch input {display:none;}
+
+			
+			.slider {
+			  position: absolute;
+			  cursor: pointer;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background-color: #ccc;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+			.slider:before {
+			  position: absolute;
+			  content: "";
+			  height: 26px;
+			  width: 26px;
+			  left: 4px;
+			  bottom: 4px;
+			  background-color: white;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+			input:checked + .slider {
+			  background-color: #2196F3;
+			}
+
+			input:focus + .slider {
+			  box-shadow: 0 0 1px #2196F3;
+			}
+
+			input:checked + .slider:before {
+			  -webkit-transform: translateX(26px);
+			  -ms-transform: translateX(26px);
+			  transform: translateX(26px);
+			}
+
+			
+			.slider.round {
+			  border-radius: 34px;
+			}
+
+			.slider.round:before {
+			  border-radius: 50%;
+			}
+			
+			}
+			body {
+				background-repeat: no-repeat;
+			}
+	        .buttonSmallC {
+			  font-family: HelveticaNeue;
+			  color: #ffffff;
+			  font-size: 10px;
+			  background: #3498db;
+			  border: 0;
+			  text-decoration: none;
+			  cursor:pointer;
+			}
+			.buttonSmallC:hover {
+			  background: #3cb0fd;
+			  text-decoration: none;
+			}
+			.buttonSmallB {
+			  font-family: HelveticaNeue;
+			  color: #ffffff;
+			  font-size: 10px;
+			  background: #3498db;
+			  border: 0;
+			  text-decoration: none;
+			  cursor:pointer;
+			}
+			.buttonSmallB:hover {
+			  background: #3cb0fd;
+			  text-decoration: none;
+			}
+			.buttonSmallA {
+			  font-family: HelveticaNeue;
+			  color: #ffffff;
+			  font-size: 10px;
+			  background: #3498db;
+			  border: 0;
+			  text-decoration: none;
+			  cursor:pointer;
+			}
+			.buttonSmallA:hover {
+			  background: #3cb0fd;
+			  text-decoration: none;
+			}
+			.buttonA {
+			  font-family: HelveticaNeue;
+			  color: #ffffff;
+			  font-size: 10px;
+			  background: #3498db;
+			  border: 0;
+			  padding: 7px 12px 7px 12px;
+			  text-decoration: none;
+			  cursor:pointer;
+			  text-align:center;
+			}
+			.buttonA:disabled {
+				background: #C0C0C0;
+			}
+			.buttonA:hover:enabled {
+			  background: #3cb0fd;
+			  text-decoration: none;
+			}
+	</style>
+  
+  </head>
+  <body style="width: 250px; background-image: url('bg.jpg')">
+  
+  <div style="text-align:center">
+  <img src="icons/48x48.png"/>
+  <p style = "color:white; font-size: 24px; font-family: 'HelveticaNeue'">SmartSieve</p>
+  <p style = "color:white; font-family: 'HelveticaNeue'">Auto Filtering Mode</p>
+  <div style="text-align:center;">
+    <label class="switch">
+	  <input id="filterSlider" type="checkbox">
+	  <div class="slider"></div>
+	</label>
+	</div> 
+	
+	
+    
+
+	<input id="blacklistURL" type="text" name="blacklistURL"/>
+	<br>
+	<button id="button_18blacklist" class="buttonA">Use 18+ Filter</button>
+	&nbsp;
+	<button id="button_electionblacklist" class="buttonA">Use Elections Filter</button>
+	&nbsp;
+	<br><br/>
+	<button id="button_bloodblacklist" class="buttonA">Use Hemophobia Filter</button>
+	
+	<br><br/><button id="button_manualFilter"  class="buttonA" style = "font-family: 'HelveticaNeue';">Filter Page</button>
+	</div>
+	
+	<script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>

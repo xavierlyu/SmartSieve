@@ -1,0 +1,14 @@
+election
+government
+governor
+president
+politician
+leader
+administration
+finance
+presidential
+democracy
+leadership
+democrat
+republican
+demagogue 

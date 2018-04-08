@@ -1,0 +1,9 @@
+blood
+gore
+kill
+stab
+murder
+suicide
+death
+die
+wound
